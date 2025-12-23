@@ -16,8 +16,7 @@ import java.util.List;
 public class Course {
 
     @Id
-    @GeneratedValue
-    @Column(name = "Course")
+    @Column(name = "courseId")
     private String courseId;
 
     @Column(nullable = false, unique = true)
@@ -35,8 +34,5 @@ public class Course {
     private Integer duration;
 
     private Double price;
-
-    @OneToMany(mappedBy = "course")
-    private List<Video> list = new ArrayList<>();
 
 }

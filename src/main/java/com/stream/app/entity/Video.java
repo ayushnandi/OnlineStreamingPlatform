@@ -22,17 +22,13 @@ public class Video {
     @Column(length = 1000)
     private String description;
 
-    @Column(nullable = false)
-    private String type;   // mp4, mkv, etc.
+    @Column(name = "contentType")
+    private String contentType;
 
-    @Column(columnDefinition = "meta_data")
+    @Column(columnDefinition = "text")
     private String meta;   // JSON / metadata
 
     @Column(name = "file_path", nullable = false)
     private String filePath;
-
-    @ManyToOne
-    private Course course;
-
 
 }
